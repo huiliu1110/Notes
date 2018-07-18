@@ -1,0 +1,51 @@
+// div#A
+// div#B
+// li#abc
+// li#?
+
+var root1 = document.getElementById('A');
+var root2 = document.getElementById('B');
+const id = 'abc';
+
+var nodes1 = root1.children;
+var nodes2 = root2.children;
+
+// DFS 
+// BFS
+function DFS(roo1, root2) {
+    const nodes1 = root1.children;
+    const nodes2 = root2.children;
+
+    for (let i = 0; i < nodes1.length; i++) {
+        if (nodes1[i].id === id) {
+            return nodes2[i].id;
+        } else {
+            var result = DFS(nodes1[i], nodes2[i]);
+            if (result)
+            return result;
+        }
+    }
+    
+    return null;
+}
+
+
+// nodes1 =  [h1, p, ul]
+// nodes2 =  [h1, p, ul]
+
+DFS(h1, h1)
+// nodes1 = []
+// nodes2 = []
+// return null
+
+// i = 1
+DFS(p, p)
+// nodes1 = []
+// nodes2 = []
+// return null
+
+// i = 2
+DF(ul, ul)
+// nodes1 = [li, li, li]
+// nodes2 = [li, li, li]
+// return nodes2[2] li
