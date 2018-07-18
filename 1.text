@@ -1,0 +1,137 @@
+var inputs = [{id: 'a', value: '1'}, {id: 'b', value: '2'}, {id: 'c', value: '3'}];
+var $form = document.getElementByTagName('form');
+var $text = document.getElementById('txt_val');
+
+
+$form.addEventListener('click', function(e) {
+  $text.value = inputs.find(function(input) {
+    return input.id === e.target.id;
+  }).value;
+});
+
+
+
+
+
+
+<Wrapper />
+
+JSX
+Component  - lifycycle
+
+Tooltip,Expandable, 
+
+
+This.state = {
+Open: false}
+
+handleClick = {
+ this.setState({
+Open: 
+})
+
+<Trigger onClick={} }
+
+Redux - store data, dispatch action, 
+
+var inputs = [{id: 'a', value: '1'}, {id: 'b', value: '2'}, {id: 'c', value: '3'}];
+
+<form>
+   <input type="text"  id=”txt_val”  />
+   <input type="button" id="a" value="A"/>
+    <input type="button" id="b" value="B"/>
+     <input type="button" id="c" value="C"/>
+</form>
+
+$text = document.getElementById(‘txt_val’);
+
+inputs.forEach(function(input) {
+	document.getElementById(input.id).addEventListener(‘click’, function() {
+$text.value = input.value;
+});
+});
+
+
+
+// inputs is global variable, we can access it at runtime. 
+// if it is not,
+For (let i = 0; i < inputs.length; i++ ){
+document.getElementById(inputs[i].id).addEventListener(‘click’, function(e) {
+$text.value =inputs[i].value;
+});
+}
+
+'use strict';
+
+var inputs = [{ id: 'a', value: '1' }, { id: 'b', value: '2' }, { id: 'c', value: '3' }];
+
+var _loop = function _loop(i) {
+  document.getElementById(inputs[i].id).addEventListener('click', function (e) {
+    $text.value = inputs[i].value;
+  });
+};
+
+for (var i = 0; i < inputs.length; i++) {
+  _loop(i);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var inputs = [{id: 'a', value: '1'}, {id: 'b', value: '2'}, {id: 'c', value: '3'}];
+var $text = document.getElementById('txt_val');
+
+console.log($text)
+
+/* var i = 0; */
+
+for (var i = 0; i < inputs.length; i++ ){
+var ith = (index => () => {
+	$text.value = inputs[index].value
+})(i)
+
+	document.getElementById(inputs[i].id).addEventListener('click', ith);
+}
+
+
+
+
+
+
+
+Var $text = document.getElementById(“txt_val”)
+
+Var $btn1 = document.getElementById(“a”)
+Var $btn2 = document.getElementById(“b”)
+Var $btn3 = document.getElementById(“c”)
+
+Var btns = $(“input:type=”button””);
+
+
+
+$btn1.addEventListener(‘click’, function(e) {
+$text.value =inputs.find(function(input) {
+Return input.id === $btn1.id;
+).value;
+});
+
+
+$form.addEventListener(‘click’, function(e){
+$text.value =inputs.find(function(input) {
+Return input.id === e.target.id;
+).value;
+});
