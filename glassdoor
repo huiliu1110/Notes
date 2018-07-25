@@ -1,0 +1,72 @@
+July 23, 2018
+
+1. what is vanilla js?
+2. algorithm question with hashmap
+3. event handler functions
+4. DOM manipulation
+5. HTTP requests
+6. CSS preprocessors
+7. Prototypes vs Private method of a class and this.method
+A private method can be called a local method, 
+usually those are found inside the constructor of the parent class and can only be accessed by privileged methods 
+(example: this.method). 
+They are not visible to prototypes of the parent class as their scope is limited to the parent. 
+Prototype can be a copy or child inheriting all parent class's privileged methods.
+8. Create a template using HTML and CSS without running code
+9. How to check if the string is palindrome?
+10. What is bubble event?
+11. Bubbling and capturing
+12. js tricky question to determine the 'this' context
+Bubbling : from target to highest parent
+capturing: from Highest parent to target
+My advice is to listen to this: https://youtu.be/yuo8YqKDQ-M You will never ever be confused about "this"
+13. Javascript concepts such as Bubbling, Events, Promises, Semantic and Non-Semantic CSS etc.
+14. What is the difference between callbacks and promises? What is event bubbling? HTML5 semantics tags 
+15. They showed me an application and asked me how would i design it from scratch 
+16. DOM traversal using plain javascript
+17. closures and algorithms
+18. think and solve a problem and have an answer in mind to say when he asks "Why did you choose this approach"
+19. Event Propagation - specifically event bubbling. Give example.  
+Abutton is clicked and the event is directed to the button
+If an event handler is set for that object, the event is triggered
+If no event handler is set for that object, the event bubbles up (like a bubble in water) to the objects parent
+
+20. What are CSS Processors? Give example(s) and give pros and cons.  
+A preprocessor is a program that takes one type of data and converts it to another type of data. In the case of HTML and CSS, some of the more popular preprocessor languages include Haml and Sass, Less . Haml is processed into HTML and Sass, Less are processed into CSS. CSS is primitive code which is made more readable and productive and easy ro maintain using these pre-processors.
+
+We can also use other features using these pre-processing languages:
+1. Declare Variable to associate with color
+2.Use if/else statements
+3.MIxin files
+4. Nesting.
+5. Imports
+6.Loops
+7.Math
+
+21. Write an algorithm to sort and organize API data.  
+22. What is your favorite website? 
+23. Explain the process of bubbling in the DOM.  
+24. Given an array of members, use Javascript to insert links for each of the members into a content div.  
+25. - Recursion
+- Traversing the DOM (using its APIs)
+- Strings manipulation
+- Objects and Arrays
+- Javascript core concepts (Prototypal inheritance, closures, pure functions, ES6+ features, sorting objects, hashtables)  
+26. prototype inheritance, event bubbling 
+27. Given a staircase, you can jump 1, or 2, or 3 steps each time, how many ways you can jump to N level staircase 
+28. Design a month view Calendar. (it has a few previous month dates, current month dates, and a few next month dates), you can select a a date to change current month  
+29. Print tree level by level  
+30. Javascript basics, OOP, Inheritance  
+40. Permutations of a word
+41. Javascript iterating and manipulating a complex json object  
+42. implement html/css/js of a widget on linkedin.com  
+43. 1 design interview and 1 cultural fit interview  
+44. 1) Technical phone screen - This was a standard collabedit phone screen. Part-1 I was given some code and was asked the output and how to fix it. It was based on scope and JS inheritance. Part-2 HTML/CSS Had to code it from an image they had. I was also asked to explain floats| promises| accessibility.This was pretty straightforward, make sure you brush up on core JS.
+2) Heard back roughly a week later and was invited Onsite. The onsite had 6 interviews with lunch. The HR will give you the different modules each interview focuses on. All interviews we mainly focused on UI(html/css/js) except 1 which was an Algo string manipulation question.
+Some modules were just JS, some I had to build out the whole component as a plugin(html/css/js). The design question was also more UI layer focused than system architecture which was unusual.
+String manipulation. Write a jquery method in pure JS. Pragmatic UI.  
+45. DOM/Event, accessibility, and CSS preprocessors verbal response questions. Followed by coding change that focused on class inheritance and keyword this. Then implement very simple UI with just plain HTML  
+46. Build a calendar web application.  
+
+
+Feb 21 2017.
