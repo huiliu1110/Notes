@@ -1,6 +1,72 @@
 A closure gives you access to an outer function's scope from an inner function.
 Closures can be used for things like implementing privacy and creating function factories.
 
+closures allows inner function to access the variables in the outside function in which it is declared. Below MDN example explains it very well.
+
+```
+function init() {
+  var name = 'Mozilla'; // name is a local variable created by init
+  
+  function displayName() { // displayName() is the inner function, a closure
+    alert(name);  // use variable declared in the parent function
+  }
+  displayName();
+}
+init();
+```
+
+currying a.k.a. partially applied function
+In javascript, function can return a function. Because of that we can call the returned function with variety of arguments.
+For example,
+- We can pass arguments as usual we do to all the functions
+- We can use variables from its parent function where it the function was declared via closure
+- We can partially process the arguments before passing it to the returned function via closure
+- We can prefix these arguments with some value and so forth.
+
+So, this idea of calling the return function with variety of arguments is called currying. 
+
+
+- Implement the compound function which returns a function and satisfies the following condition
+
+```
+function add10 (a) {
+  return a + 10
+}
+
+function compound (f) {
+  return function (b) {
+    return f(f(b));
+  }
+}
+console.log(add10(10)) // 20
+console.log(compound(add10)(10)) // 30
+```
+
+- Write a function say which logs the following.
+
+```
+console.log(say('Foo')('bar')()) // => "Foo bar"
+console.log(say('Hi')('my')('name')('is')('Foo')()) // "Hi my name is Foo "
+
+let sentence = ''
+
+function say() {
+  if (!arguments[0]) {
+    let s = sentence;
+    sentence = '';
+    return s;
+  } else {
+    sentence += arguments[0] + ' ';
+    return say;
+  }
+}
+```
+
+- Implement setInterval using setTimeout in javascript
+```
+
+```
+
 - What will the following code output?
 
 ```
