@@ -32,6 +32,7 @@ Jest provides
 5. `xit()` for temporarily exclude a test from being excuted.
 6. `fit()` for focusing on a specific test without runnig any other testing.
 7. `npm test -- --coverage` for creating a coverage report. 
+8. `npm test --watchAll=false` or `CI=true npm test` for running test only once instead of launching the watcher. 
 
 ---
 
