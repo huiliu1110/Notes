@@ -106,7 +106,7 @@ import 'jest-dom/extend-expect';
 ```
 
 #### Good examples: 
-https://github.com/kentcdodds/react-testing-library-examples
+https://github.com/kentcdodds/react-testing-library-examples  
 https://codesandbox.io/s/github/kentcdodds/react-testing-library-examples.
 
 ---
