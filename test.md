@@ -114,6 +114,12 @@ https://codesandbox.io/s/github/kentcdodds/react-testing-library-examples.
 VsCode - Jest extension: vscode-jest
 
 
+---
+
+Selenium
+
+
+Cyperss (https://docs.cypress.io/guides/overview/why-cypress.html#In-a-nutshell)
 
 
 
