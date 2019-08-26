@@ -13,8 +13,13 @@
 ###### Caching
 ###### Load balancing
 ###### Database replication
+1) https://en.wikipedia.org/wiki/Replication_(computing)#Database_replication
+2) A master-slave relationship between the original and the copies. The master logs the updates, which then ripple through to the slaves.
+3) Multi-master replication, updates can be submitted to any database node, then ripple through to other servers. challenge: transactional confilict prevention or resolution.
 ###### Database partitioning
-
+1) A partition is a division of a logical database or its constituent elements into distinct independent parts.  
+2) Horizontal partitioning involves putting different rows into different tables.
+3) Vertical partitioning involves creating tables with fewer columns and using additional tables to store the remaining columns.
 
 
 步骤1：明确系统所需要满足的用例，范围和约束。
