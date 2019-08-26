@@ -10,10 +10,10 @@
 3) Scaling out from one web server to three.  
 4) To support tasks required expensive computations, large social networks.  
 5) Exploiting this scalability requires software for efficient resource management and maintenance.
-Caching
-Load balancing
-Database replication
-Database partitioning
+###### Caching
+###### Load balancing
+###### Database replication
+###### Database partitioning
 
 
 
