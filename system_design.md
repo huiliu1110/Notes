@@ -22,6 +22,21 @@
 3) Vertical partitioning involves creating tables with fewer columns and using additional tables to store the remaining columns.
 
 
+
+
+<br />
+<br />
+<br /><br />
+
+
+
+<br />
+
+<br />
+<br /><br />
+<br />
+<br />
+<br />
 步骤1：明确系统所需要满足的用例，范围和约束。
 
 举例说明：
