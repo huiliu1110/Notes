@@ -1,7 +1,7 @@
 步骤1：明确系统所需要满足的用例，范围和约束。
 
 举例说明：
-URL shortening service:
+URL shortening service:  
 1）服务于几千用户，但是每个用户可能有百万个URL需要被简化。  
 2）同时处理百万次的点击，或者几十次点击。  
 3）提供数据分析，或者不需要提供。  
@@ -22,4 +22,18 @@ Contraints:
 步骤2: 
 
 
+Vertical scaling  
+1) Adding resources to (or removing resources from) a single node.  
+2) The addition of CPUs, memory or storage to a single computer.  
+3) More sophisticated programming to allocate tasks among resources and handle issues such as throughput and latency across nodes.   
+Horizontal scaling  
+1) Adding more nodes to (or removing nodes from) a system.  
+2) Adding a new computer to a distributed software application.  
+3) Scaling out from one web server to three.  
+4) To support tasks required expensive computations, large social networks.  
+5) Exploiting this scalability requires software for efficient resource management and maintenance.
+Caching
+Load balancing
+Database replication
+Database partitioning
 
