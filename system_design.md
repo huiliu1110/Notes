@@ -1,3 +1,22 @@
+
+
+###### Vertical scaling  
+1) Adding resources to (or removing resources from) a single node.  
+2) The addition of CPUs, memory or storage to a single computer.  
+3) More sophisticated programming to allocate tasks among resources and handle issues such as throughput and latency across nodes.   
+###### Horizontal scaling  
+1) Adding more nodes to (or removing nodes from) a system.  
+2) Adding a new computer to a distributed software application.  
+3) Scaling out from one web server to three.  
+4) To support tasks required expensive computations, large social networks.  
+5) Exploiting this scalability requires software for efficient resource management and maintenance.
+Caching
+Load balancing
+Database replication
+Database partitioning
+
+
+
 步骤1：明确系统所需要满足的用例，范围和约束。
 
 举例说明：
@@ -20,20 +39,3 @@ Contraints:
 2）amount of data: 10BN records, 1000 bytes per record.
 
 步骤2: 
-
-
-Vertical scaling  
-1) Adding resources to (or removing resources from) a single node.  
-2) The addition of CPUs, memory or storage to a single computer.  
-3) More sophisticated programming to allocate tasks among resources and handle issues such as throughput and latency across nodes.   
-Horizontal scaling  
-1) Adding more nodes to (or removing nodes from) a system.  
-2) Adding a new computer to a distributed software application.  
-3) Scaling out from one web server to three.  
-4) To support tasks required expensive computations, large social networks.  
-5) Exploiting this scalability requires software for efficient resource management and maintenance.
-Caching
-Load balancing
-Database replication
-Database partitioning
-
