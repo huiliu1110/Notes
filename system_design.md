@@ -17,9 +17,10 @@
 2) A master-slave relationship between the original and the copies. The master logs the updates, which then ripple through to the slaves.
 3) Multi-master replication, updates can be submitted to any database node, then ripple through to other servers. challenge: transactional confilict prevention or resolution.
 ###### Database partitioning
-1) A partition is a division of a logical database or its constituent elements into distinct independent parts.  
-2) Horizontal partitioning involves putting different rows into different tables.
-3) Vertical partitioning involves creating tables with fewer columns and using additional tables to store the remaining columns.
+1) https://en.wikipedia.org/wiki/Partition_(database)  
+2) A partition is a division of a logical database or its constituent elements into distinct independent parts.  
+3) Horizontal partitioning involves putting different rows into different tables.
+4) Vertical partitioning involves creating tables with fewer columns and using additional tables to store the remaining columns.
 
 
 
