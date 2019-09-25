@@ -1,3 +1,16 @@
+Check for python path:
+```
+type -a python
+which python
+ls -l /usr/bin/python
+```
+
+Install python 3:
+```
+brew install python@2
+brew upgrade python3
+```
+
 Python 3 comes bundled with the venv module to create virtual environment.
 
 Create a project folder and a venv folder within:
