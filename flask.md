@@ -32,7 +32,7 @@ pip install Flask
 
 A minimal Flask application looks something like below, save it as `hello.py`:
 ```
-from Flask import Flask
+from flask import Flask
 app = Flask(__name__)
 
 @app.route('/')
