@@ -173,3 +173,4 @@ iterator.next();
 Some other references:
 1) ECMAScript6 - http://es6-features.org/
 2) Exploring ES6 Book - https://exploringjs.com/es6/index.html
+3) Elegant patterns in modern JavaScript: RORO https://medium.com/free-code-camp/elegant-patterns-in-modern-javascript-roro-be01e7669cbd
