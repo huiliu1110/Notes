@@ -170,3 +170,4 @@ iterator.next();
 ---
 Some other references:
 1) ECMAScript6 - http://es6-features.org/
+2) Exploring ES6 Book - https://exploringjs.com/es6/index.html
