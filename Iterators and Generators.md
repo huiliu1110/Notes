@@ -166,6 +166,8 @@ iterator.next();
 iterator.next();
 // {value: "Dr. Seuss", done: true}
 ```
+---
+#### Generators
 
 ---
 Some other references:
