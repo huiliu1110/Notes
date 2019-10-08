@@ -177,10 +177,10 @@ Generator functions, **run until yield/return/end**
 > 3. The generator object needs to be assigned to a variable to keep track of the subsequent next() methods called on itself.
 > 4. If the generator is not assigned to a variable then it will always yield only till first yield expession on every next(). 
 
-Every next() call on the generator executes every line of code until the next yield it encounters and suspends its execution temporarily.  
-On each next() call, returns its value in the form of an object containing the following parameters.
-1. value - is everything that is written on the right side of the yield keyword, or the value of return statement.
-2. done - indicates the status of the generator, whether it can be executed further or not. 
+> Every next() call on the generator executes every line of code until the next yield it encounters and suspends its execution temporarily.  
+> On each next() call, returns its value in the form of an object containing the following parameters.
+> 1. value - is everything that is written on the right side of the yield keyword, or the value of return statement.
+> 2. done - indicates the status of the generator, whether it can be executed further or not. 
 
 ```
 function* generatorFunction(i) {
