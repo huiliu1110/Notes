@@ -179,7 +179,7 @@ Generator functions, **run until yield/return/end**
 
 Every next() call on the generator executes every line of code until the next yield it encounters and suspends its execution temporarily.  
 On each next() call, returns its value in the form of an object containing the following parameters.
-1. value - is everything that is written on the right side of the yield keyword.
+1. value - is everything that is written on the right side of the yield keyword, or the value of return statement.
 2. done - indicates the status of the generator, whether it can be executed further or not. 
 
 ```
@@ -335,18 +335,18 @@ function* g2() {
 
 Yield* with Return:
 ```
-function* genFunctionChild() {
+function* genaratorFunctionChild() {
   yield 1;
   yield 2;
   return 'foo';
   yield 3;
 }
-function* genFunctionMain() {
-  const result = yield* genFunctionChild();
+function* genaratorFunctionMain() {
+  const result = yield* genaratorFunctionChild();
   console.log(result);
   yield 'the end';
 }
-let generator = genFunctionMain();
+let generator = genaratorFunctionMain();
 
 console.log(generator.next()); // {value: 1, done: false}
 console.log(generator.next()); // {value: 2, done: false}
@@ -354,6 +354,102 @@ console.log(generator.next()); // 'foo' {value: 'the end', done: false}
 console.log(generator.next()); // {value: undefined, done: true}
 ```
 
+Yield* with a Built-in Iterable object:
+```
+function* generatorFunction() {
+  yield* [1, 2];
+  yield* 'HI';
+  yield* arguments;
+}
+let generator = generatorFunction(5, 6);
+
+console.log(generator.next()); // {value: 1, done: false}
+console.log(generator.next()); // {value: 2, done: false}
+console.log(generator.next()); // {value: 'H', done: false}
+console.log(generator.next()); // {value: 'I', done: false}
+console.log(generator.next()); // {value: 5, done: false}
+console.log(generator.next()); // {value: 6, done: false}
+console.log(generator.next()); // {value: undefined, done: true}
+```
+
+Yield with for...of:
+1. every iterator/generator can be iterated over a for...of loop.
+2. for...of loop internally moves on to the next iteration based on the yield keyword.
+3. for...of iterates only till the last yield and doesn't process the return statements like the next() method.
+4. Avoid return statements inside a generator function as it would affect the reusability of the function when iterated over a for...of.
+```
+function* generatorFunctionChild() {
+  yield 1;
+  yield 2;
+  return 'foo';
+  yield 3;
+}
+function* generatorFunctionMain() {
+  const result = yield* generatorFunctionChild();
+  console.log(result);
+  yield 'the end';
+}
+let generator = generatorFunctionMain();
+
+for (let i of generator) {
+  console.log(i);
+}
+// 1
+// 2
+// 'foo'
+// 'the end'
+```
+
+```
+function* generatorFunctionChild() {
+  yield 1;
+  yield 2;
+  return 'foo';
+  yield 3;
+}
+function* generatorFunctionMain() {
+  const result = yield* generatorFunctionChild();
+  console.log(result);
+  yield 'the end';
+  console.log('the end end');
+}
+let generator = generatorFunctionMain();
+
+for (let i of generator) {
+  console.log(i);
+}
+// 1
+// 2
+// 'foo'
+// 'the end'
+// 'the end end'
+```
+
+```
+function* generatorFunctionChild() {
+  yield 1;
+  yield 2;
+  return 'foo';
+  yield 3;
+}
+function* generatorFunctionMain() {
+  const result = yield* generatorFunctionChild();
+  console.log(result);
+  yield 'the end';
+  console.log('the end end');
+  return 'the end end end';
+}
+let generator = generatorFunctionMain();
+
+for (let i of generator) {
+  console.log(i);
+}
+// 1
+// 2
+// 'foo'
+// 'the end'
+// 'the end end'
+```
 
 ---
 Some other references:
