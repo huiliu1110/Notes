@@ -214,6 +214,23 @@ console.log(generatorFunction(5).next()); // {value: 5, done: false}
 console.log(generatorFunction(5).next()); // {value: 5, done: false}
 ```
 
+```
+function* generatorFunction(i) {
+  console.log(i);
+  const j = 5 * (yield (i * 10));
+  console.log(j);
+  const k = yield (2 * j / 4);
+  console.log(k);
+  return (i + j + k);
+}
+let generator = generatorFunction(10);
+
+console.log(generator.next(20));
+console.log(generator.next(10));
+console.log(generator.next(5));
+```
+
+
 ---
 Some other references:
 1) ECMAScript6 - http://es6-features.org/
