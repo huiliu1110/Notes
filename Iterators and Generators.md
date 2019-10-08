@@ -169,6 +169,21 @@ iterator.next();
 ---
 #### Generators
 
+Functions in JavaScript, **run until return/end**  
+Generator functions, **run until yield/return/end**
+
+1. Once created, calling the generator function returns the Generator Object, 
+2. which holds the entire Generator Iterable that can be iterated using next() method or for...of loop.
+3. The generator object needs to be assigned to a variable to keep track of the subsequent next() methods called on itself.
+4. If the generator is not assigned to a variable then it will always yield only till first yield expession on every next(). 
+
+Every next() call on the generator executes every line of code until the next yield it encounters and suspends its execution temporarily.  
+On each next() call, the yield expession returns its value in the form of an object containing the following parameters.
+1. value - is everything that is written on the right side of the yield keyword.
+2. done - indicates the status of the generator, whether it can be executed further or not. 
+
+
+
 ---
 Some other references:
 1) ECMAScript6 - http://es6-features.org/
