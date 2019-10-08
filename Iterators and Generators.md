@@ -232,6 +232,8 @@ console.log(generator.next()); // undefined {value: undefined, done: true}
 ```
 
 **Passing arguments to the next() Method:**
+1. Starting from second next(), the previous yield is replaced with arguments passed in the next function.
+2. The next() method called without any arguments essentially means that the entire previous yield expression is undefined.
 ```
 function* generatorFunction(i) {
   console.log(i);
