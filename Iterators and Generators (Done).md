@@ -23,7 +23,7 @@ for (let index = 0; index < myFavouriteAuthors.length; index++) {
 // while loop
 let index = 0;
 while (index < myFavouriteAuthors.length) {
-  console.log(myFavouriteAuthors[index];
+  console.log(myFavouriteAuthors[index]);
   index++;
 }
 
