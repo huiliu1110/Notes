@@ -191,7 +191,25 @@ let generator = generatorFunction(5);
 console.log(generator.next()); // {value: 5, done: false}
 console.log(generator.next()); // {value: 6, done: false}
 console.log(generator.next()); // {value: undefined, done: true}
+```
 
+```
+function* generatorFunction(i) {
+  yield i;
+  yield i + 1;
+  return i;
+}
+let generator = generatorFunction(5);
+console.log(generator.next()); // {value: 5, done: false}
+console.log(generator.next()); // {value: 6, done: false}
+console.log(generator.next()); // {value: 5, done: true}
+```
+
+```
+function* generatorFunction(i) {
+  yield i;
+  yield i + 1;
+}
 console.log(generatorFunction(5).next()); // {value: 5, done: false}
 console.log(generatorFunction(5).next()); // {value: 5, done: false}
 ```
