@@ -188,6 +188,7 @@ function* generatorFunction(i) {
   yield i + 1;
 }
 let generator = generatorFunction(5);
+
 console.log(generator.next()); // {value: 5, done: false}
 console.log(generator.next()); // {value: 6, done: false}
 console.log(generator.next()); // {value: undefined, done: true}
@@ -200,6 +201,7 @@ function* generatorFunction(i) {
   return i;
 }
 let generator = generatorFunction(5);
+
 console.log(generator.next()); // {value: 5, done: false}
 console.log(generator.next()); // {value: 6, done: false}
 console.log(generator.next()); // {value: 5, done: true}
@@ -229,7 +231,7 @@ console.log(generator.next()); // undefined {value: 2, done: false}
 console.log(generator.next()); // undefined {value: undefined, done: true}
 ```
 
-Passing arguments to the next() Method:
+**Passing arguments to the next() Method:**
 ```
 function* generatorFunction(i) {
   console.log(i);
@@ -239,13 +241,28 @@ function* generatorFunction(i) {
   console.log(k);
   return (i + j + k);
 }
-var generator = generatorFunction(10);
+let generator = generatorFunction(10);
 
 console.log(generator.next(20)); // 10 {value: 100, done: false}
 console.log(generator.next(10)); // 50 {value: 25, done: false}
 console.log(generator.next(5));  // 5 {value: 65, done: true}
 ```
 
+Passing Yield as an argument of a function:
+```
+function* generatorFunction() {
+  yield;
+  foo(yield "Hello");
+}
+function foo(x) {
+  console.log(`Just printing argument passed ${x}`);
+}
+let generator = generatorFunction();
+
+console.log(generator.next()); // {value: undefined, done: false}
+console.log(generator.next()); // {value: "Hello", done: false}
+console.log(generator.next()); // "Just printing argument passed undefined" {value: undefined, done: true}
+```
 
 ---
 Some other references:
