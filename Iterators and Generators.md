@@ -178,7 +178,7 @@ Generator functions, **run until yield/return/end**
 4. If the generator is not assigned to a variable then it will always yield only till first yield expession on every next(). 
 
 Every next() call on the generator executes every line of code until the next yield it encounters and suspends its execution temporarily.  
-On each next() call, the yield expession returns its value in the form of an object containing the following parameters.
+On each next() call, returns its value in the form of an object containing the following parameters.
 1. value - is everything that is written on the right side of the yield keyword.
 2. done - indicates the status of the generator, whether it can be executed further or not. 
 
@@ -207,6 +207,7 @@ console.log(generator.next()); // {value: 6, done: false}
 console.log(generator.next()); // {value: 5, done: true}
 ```
 
+If the generator is not assigned to a variable:
 ```
 function* generatorFunction(i) {
   yield i;
@@ -265,6 +266,73 @@ console.log(generator.next()); // {value: undefined, done: false}
 console.log(generator.next()); // {value: "Hello", done: false}
 console.log(generator.next()); // "Just printing argument passed undefined" {value: undefined, done: true}
 ```
+
+Yield with a function call:
+```
+function* fetchUser() {
+  const user = yield getData();
+  console.log(user);
+}
+function getData() {
+  return {name: "Hui"};
+}
+let fetchGen = fetchUser();
+
+console.log(fetchGen.next().value); // {name: "Hui"}
+console.log(fetchGen.next()); // undefined {value: undefined, done: true}
+```
+
+Yield with Promise:
+```
+function* fetchUser(action) {
+  const user = yield apiCall();
+}
+function apiCall() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve({name: "Hui"});
+    }, 2000);
+  });
+}
+let fetchGen = fetchUser();
+
+console.log(fetchGen.next().value.then(n => console.log(n))); // Promise {name: "Hui"}
+```
+
+**Yield***
+1. Yield* when used inside a generator function delegates another generator function.
+2. It synchronously completes the generator function in its expression before moving on to the next line.
+```
+function* g1() {
+  yield 2;
+  yield 3;
+  yield 4;
+}
+function* g2() {
+  yield 1;
+  yield* g1();
+  yield 5;
+}
+let generator = g2();
+
+console.log(generator.next()); // {value: 1, done: false}
+console.log(generator.next()); // {value: 2, done: false}
+console.log(generator.next()); // {value: 3, done: false}
+console.log(generator.next()); // {value: 4, done: false}
+console.log(generator.next()); // {value: 5, done: false}
+console.log(generator.next()); // {value: undefined: done: true}
+```
+Above code is same as the one below:
+```
+function* g2() {
+  yield 1;
+  yield 2;
+  yield 3;
+  yield 4;
+  yield 5;
+}
+```
+
 
 ---
 Some other references:
