@@ -333,6 +333,27 @@ function* g2() {
 }
 ```
 
+Yield* with Return:
+```
+function* genFunctionChild() {
+  yield 1;
+  yield 2;
+  return 'foo';
+  yield 3;
+}
+function* genFunctionMain() {
+  const result = yield* genFunctionChild();
+  console.log(result);
+  yield 'the end';
+}
+let generator = genFunctionMain();
+
+console.log(generator.next()); // {value: 1, done: false}
+console.log(generator.next()); // {value: 2, done: false}
+console.log(generator.next()); // 'foo' {value: 'the end', done: false}
+console.log(generator.next()); // {value: undefined, done: true}
+```
+
 
 ---
 Some other references:
