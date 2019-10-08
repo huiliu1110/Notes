@@ -182,7 +182,20 @@ On each next() call, the yield expession returns its value in the form of an obj
 1. value - is everything that is written on the right side of the yield keyword.
 2. done - indicates the status of the generator, whether it can be executed further or not. 
 
+```
+function* generatorFunction(i) {
+  yield i;
+  yield i + 1;
+  return i;
+}
+let generator = generatorFunction(5);
+console.log(generator.next()); // {value: 5, done: false}
+console.log(generator.next()); // {value: 6, done: false}
+console.log(generator.next()); // {value: 5, done: true}
 
+console.log(generatorFunction(5).next()); // {value: 5, done: false}
+console.log(generatorFunction(5).next()); // {value: 5, done: false}
+```
 
 ---
 Some other references:
