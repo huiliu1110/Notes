@@ -223,11 +223,11 @@ function* generatorFunction(i) {
   console.log(k);
   return (i + j + k);
 }
-let generator = generatorFunction(10);
+var generator = generatorFunction(10);
 
-console.log(generator.next(20));
-console.log(generator.next(10));
-console.log(generator.next(5));
+console.log(generator.next(20)); // 10 {value: 100, done: false}
+console.log(generator.next(10)); // 50 {value: 25, done: false}
+console.log(generator.next(5));  // 5 {value: 65, done: true}
 ```
 
 
