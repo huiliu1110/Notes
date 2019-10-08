@@ -56,7 +56,7 @@ const myFavouriteAuthors = {
 }
 ```
 
-for-of loop
+for-of loop:
 ```
 for (let author of myFavouriteAuthors) {
   console.log(author)
@@ -64,7 +64,7 @@ for (let author of myFavouriteAuthors) {
 // TypeError: myFavouriteAuthors is not iterable
 ```
 
-Add a method to return all the data
+Add a method to return all the data:
 ```
 const myFavouriteAuthors = {
   allAuthors: {
@@ -112,7 +112,7 @@ ECMA standardize this process of looping over custom objects, and used `Symbol.i
 4) `next` will return an object with keys `value` and `done`. `value` will contain the current value, it can be of any type. `done` is boolean, denotes whether all the values have been fetched or not. 
 6) The relation between `iterables`, `iterators`, and `next` is called the Iteration Protocol.
 
-Make myFavouriteAuthors iterable
+Make myFavouriteAuthors iterable:
 ```
 const myFavouriteAuthors = {
   allAuthors: {
@@ -214,6 +214,22 @@ console.log(generatorFunction(5).next()); // {value: 5, done: false}
 console.log(generatorFunction(5).next()); // {value: 5, done: false}
 ```
 
+Assigning Yield to a variable:
+```
+function* generatorFunction() {
+  const x = yield 1;
+  console.log(x);
+  const y = yield 2;
+  console.log(y);
+}
+let generator = generatorFunction();
+
+console.log(generator.next()); // {value: 1, done: false}
+console.log(generator.next()); // undefined {value: 2, done: false}
+console.log(generator.next()); // undefined {value: undefined, done: true}
+```
+
+Passing arguments to the next() Method:
 ```
 function* generatorFunction(i) {
   console.log(i);
