@@ -105,12 +105,12 @@ const myFavouriteAuthors = {
 }
 ```
 
-ECMA standardize this process of looping over custom objects, and used `Symbol.iterator` to name the method. 
-1) Symbols offer names that are unique and cannot clash with other property names. 
-2) `Symbol.iterator` will return an object called an `iterator`.
-3) `iterator` will have a method called `next`.
-4) `next` will return an object with keys `value` and `done`. `value` will contain the current value, it can be of any type. `done` is boolean, denotes whether all the values have been fetched or not. 
-6) The relation between `iterables`, `iterators`, and `next` is called the Iteration Protocol.
+> ECMA standardize this process of looping over custom objects, and used `Symbol.iterator` to name the method. 
+> 1) Symbols offer names that are unique and cannot clash with other property names. 
+> 2) `Symbol.iterator` will return an object called an `iterator`.
+> 3) `iterator` will have a method called `next`.
+> 4) `next` will return an object with keys `value` and `done`. `value` will contain the current value, it can be of any type. `done` is boolean, denotes whether all the values have been fetched or not. 
+> 5) The relation between `iterables`, `iterators`, and `next` is called the Iteration Protocol.
 
 Make myFavouriteAuthors iterable:
 ```
@@ -172,10 +172,10 @@ iterator.next();
 Functions in JavaScript, **run until return/end**  
 Generator functions, **run until yield/return/end**
 
-1. Once created, calling the generator function returns the Generator Object, 
-2. which holds the entire Generator Iterable that can be iterated using next() method or for...of loop.
-3. The generator object needs to be assigned to a variable to keep track of the subsequent next() methods called on itself.
-4. If the generator is not assigned to a variable then it will always yield only till first yield expession on every next(). 
+> 1. Once created, calling the generator function returns the Generator Object, 
+> 2. which holds the entire Generator Iterable that can be iterated using next() method or for...of loop.
+> 3. The generator object needs to be assigned to a variable to keep track of the subsequent next() methods called on itself.
+> 4. If the generator is not assigned to a variable then it will always yield only till first yield expession on every next(). 
 
 Every next() call on the generator executes every line of code until the next yield it encounters and suspends its execution temporarily.  
 On each next() call, returns its value in the form of an object containing the following parameters.
@@ -232,9 +232,9 @@ console.log(generator.next()); // undefined {value: 2, done: false}
 console.log(generator.next()); // undefined {value: undefined, done: true}
 ```
 
-**Passing arguments to the next() Method:**
-1. Starting from second next(), the previous yield is replaced with arguments passed in the next function.
-2. The next() method called without any arguments essentially means that the entire previous yield expression is undefined.
+> **Passing arguments to the next() Method:**
+> 1. Starting from second next(), the previous yield is replaced with arguments passed in the next function.
+> 2. The next() method called without any arguments essentially means that the entire previous yield expression is undefined.
 ```
 function* generatorFunction(i) {
   console.log(i);
@@ -299,9 +299,9 @@ let fetchGen = fetchUser();
 console.log(fetchGen.next().value.then(n => console.log(n))); // Promise {name: "Hui"}
 ```
 
-**Yield***
-1. Yield* when used inside a generator function delegates another generator function.
-2. It synchronously completes the generator function in its expression before moving on to the next line.
+> **Yield***
+> 1. Yield* when used inside a generator function delegates another generator function.
+> 2. It synchronously completes the generator function in its expression before moving on to the next line.
 ```
 function* g1() {
   yield 2;
@@ -372,11 +372,11 @@ console.log(generator.next()); // {value: 6, done: false}
 console.log(generator.next()); // {value: undefined, done: true}
 ```
 
-Yield with for...of:
-1. every iterator/generator can be iterated over a for...of loop.
-2. for...of loop internally moves on to the next iteration based on the yield keyword.
-3. for...of iterates only till the last yield and doesn't process the return statements like the next() method.
-4. Avoid return statements inside a generator function as it would affect the reusability of the function when iterated over a for...of.
+> Yield with for...of:
+> 1. every iterator/generator can be iterated over a for...of loop.
+> 2. for...of loop internally moves on to the next iteration based on the yield keyword.
+> 3. for...of iterates only till the last yield and doesn't process the return statements like the next() method.
+> 4. Avoid return statements inside a generator function as it would affect the reusability of the function when iterated over a for...of.
 ```
 function* generatorFunctionChild() {
   yield 1;
