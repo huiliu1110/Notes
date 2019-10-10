@@ -39,8 +39,8 @@ A statement performs an action.
 var add = function(a, b) {
   return a + b;
 }
-add(1, 2); // 3
-add.name  // ''
+add(1, 2);  // 3
+add.name    // ''
 ```
 1. The value produced by a function expression can be assigned to a variable.
 2. call it via that variable,
@@ -57,8 +57,8 @@ var fac = function me(n) {
     return 1;
   }
 }
-fac(6) // 6
-fac.name // 'me'
+fac(6)      // 6
+fac.name    // 'me'
 ```
 1. Give a function expression a name, allows a function expression to refer to itself.
 2. The name of a named function expression is only accessible inside the function expression.
@@ -72,8 +72,8 @@ function add(x, y) {
   return x + y;
 }
 
-add(1, 2) // 3
-add.name // 'name'
+add(1, 2)   // 3
+add.name    // 'name'
 ```
 1. A function declaration declares a new variable, creates a funcion object, and assigns it to the variable.
 
@@ -94,7 +94,7 @@ var add = new Function('x', 'y', 'return x + y');
 
 ```
 foo();
-function foo() { // this function is hoisted
+function foo() {     // this function is hoisted
 }
 
 // JavaScript engine moves the declaration of foo to the beginning of the scope,  
@@ -105,13 +105,13 @@ foo();
 ```
 
 ```
-foo(); // TypeError: undefined is not a function
+foo();              // TypeError: undefined is not a function
 var foo = function() {
 }
 
 // JavaScript engine executes the preceding code as: 
 var foo;
-foo(); // TypeError: undefined is not a function
+foo();              // TypeError: undefined is not a function
 foo = function() {
 }
 ```
