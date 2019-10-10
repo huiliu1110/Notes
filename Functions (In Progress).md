@@ -124,8 +124,31 @@ foo = function() {
 > 1. call(), apply(), and bind() are methods that all functions have.
 > 2. They can supply a value for **this** when invoking a method, thus are mainly intersting in an object-oriented context.
 
+##### In a non-object-oriented context
 
+1. func.apply(thisValue, argArray)
+2. is useful whenever a function accepts multiple arguments in an array-like manner, but not an array.
+3. thisValue is not needed in a non-object-oriented setting, and is thus null here.
 
----
+```
+Math.max(17, 33, 2)
+Math.max.apply(null, [17, 33, 2])
+```
 
-#### this
+1. func.bind(thisValue, arg1, ...argN)
+2. This performs partial function application,
+3. a new function is created,
+4. thisValue is not needed in the non-object-oriented setting.
+
+```
+function add(x, y) {
+  return x + y;
+}
+var plus1 = add.bind(null, 1);
+
+plus1(5);     // 6
+```
+
+##### In a object-oriented context
+
+1. 
