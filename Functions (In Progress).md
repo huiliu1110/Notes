@@ -72,12 +72,45 @@ function add(x, y) {
 1. A function declaration declares a new variable, creates a funcion object, and assigns it to the variable.
 
 ---
-#### (Important) The Function Constructor
-
-
+#### The Function Constructor
+```
+var add = new Function('x', 'y', 'return x + y');
+```
+1. The constructor Function() evaluates JavaScript code stored in strings.
+2. this way of defining a function is slow and keeps code in strings.
+3. It works similarly to eval().
 
 ---
+#### (Important) Hoisting
+1. Hoisting means "moving to the beginning of a scope."
+2. Function declarations are completely hoisted.
+3. var declarations are hoisted, but only the declarations, not assignments made with them.
 
+```
+foo();
+function foo() { // this function is hoisted
+}
+
+// JavaScript engine moves the declaration of foo to the beginning of the scope,  
+// executes the preceding code as
+function foo() {
+}
+foo();
+```
+
+```
+foo(); // TypeError: undefined is not a function
+var foo = function() {
+}
+
+// JavaScript engine executes the preceding code as: 
+var foo;
+foo(); // TypeError: undefined is not a function
+foo = function() {
+}
+```
+
+---
 #### call(), apply(), and bind()
 
 > 1. call(), apply(), and bind() are methods that all functions have.
