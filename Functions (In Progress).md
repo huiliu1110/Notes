@@ -149,6 +149,47 @@ var plus1 = add.bind(null, 1);
 plus1(5);     // 6
 ```
 
-##### In a object-oriented context
+##### In an object-oriented context
 
-1. 
+```
+var jane = {
+  name: 'Jane',
+  sayHelloTo: function(otherName) {
+    'use strict';
+    console.log(this.name + ' says hello to ' + otherName);
+  }
+}
+
+jane.sayHelloTo('Tarzan');                          // Jane says hello to Tarzan
+jane.sayHelloTo.call(jane, 'Tarzan');               // Jane says hello to Tarzan
+jane.sayHelloTo.call({name: 'Hui'}, 'Tarzan');      // Hui says hello to Tarzan
+
+jane.sayHelloTo.apply(jane, ['Tarzan']);            // Jane says hello to Tarzan
+jane.sayHelloTo.apply({name: 'Hui'}, ['Tarzan']);   // Hui says hello to Tarzan
+
+
+var func = jane.sayHelloTo;                         // Jane says hello to Tarzan
+func.call(jane, 'Tarazn');                          // Jane says hello to Tarzan
+func.call({name: 'Hui'}, 'Tarazn');                 // Hui says hello to Tarzan
+
+func.apply(jane, ['Tarazn']);                       // Jane says hello to Tarzan
+func.apply({name: 'Hui'}, ['Tarzan']);              // Hui says hello to Tarzan
+
+```
+> 1. Function.prototype.call(thisValue, arg1?, arg2?, ...)
+> 2. The first parameter is the value that **this** will have inside the invoked function.
+> 3. The remaining parameters are handed over as arguments to the invoked function.
+
+> 1. Function.prototype.apply(thisValue, arrArray)
+> 2. The first parameter is the value that **this** will have inside the invoked function.
+> 3. The second parameter is an array that provides the arguments for the invocation.
+
+
+
+
+
+
+
+
+
+
