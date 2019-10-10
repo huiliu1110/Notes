@@ -39,7 +39,8 @@ A statement performs an action.
 var add = function(a, b) {
   return a + b;
 }
-add(1, 2);
+add(1, 2); // 3
+add.name  // ''
 ```
 1. The value produced by a function expression can be assigned to a variable.
 2. call it via that variable,
@@ -57,10 +58,12 @@ var fac = function me(n) {
   }
 }
 fac(6) // 6
+fac.name // 'me'
 ```
 1. Give a function expression a name, allows a function expression to refer to itself.
 2. The name of a named function expression is only accessible inside the function expression.
 3. is useful for self-recursion.
+4. is useful for debugging.
 
 ---
 #### (Important) Function Declarations
@@ -68,6 +71,9 @@ fac(6) // 6
 function add(x, y) {
   return x + y;
 }
+
+add(1, 2) // 3
+add.name // 'name'
 ```
 1. A function declaration declares a new variable, creates a funcion object, and assigns it to the variable.
 
