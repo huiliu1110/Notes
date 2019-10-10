@@ -68,7 +68,7 @@ fac.name    // 'me'
 4. is useful for debugging.
 
 ---
-#### (Important) Function Declarations
+#### (Important, Recommended) Function Declarations
 ```
 function add(x, y) {
   return x + y;
