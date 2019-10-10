@@ -39,6 +39,7 @@ A statement performs an action.
 var add = function(a, b) {
   return a + b;
 }
+
 add(1, 2);  // 3
 add.name    // ''
 ```
@@ -57,6 +58,7 @@ var fac = function me(n) {
     return 1;
   }
 }
+
 fac(6)      // 6
 fac.name    // 'me'
 ```
@@ -117,10 +119,12 @@ foo = function() {
 ```
 
 ---
-#### call(), apply(), and bind()
+### (Important) call(), apply(), and bind()
 
 > 1. call(), apply(), and bind() are methods that all functions have.
-> 2. 
+> 2. They can supply a value for **this** when invoking a method, thus are mainly intersting in an object-oriented context.
+
+
 
 ---
 
