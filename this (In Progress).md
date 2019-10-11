@@ -75,4 +75,43 @@ var myObject = {
         }());
     }
 };
+myObject.func();
+```
+```
+var hero = {
+    _name: 'John Doe',
+    getSecretIdentity: function (){
+        return this._name;
+    }
+};
+
+var stoleSecretIdentity = hero.getSecretIdentity;               // extracting the method from the hero object
+
+console.log(stoleSecretIdentity());                             // undefined
+console.log(hero.getSecretIdentity());                          // John Doe
+```
+```
+var length = 10;
+function fn() {                                                 // function declaration
+	console.log(this.length);
+}
+
+var obj = {
+  length: 5,
+  method: function(fn) {
+    fn();                                                      // 10
+    arguments[0]();                                            // 2 !!!!!!!!!!!!!important
+  }
+};
+
+obj.method(fn, 1);
+```
+
+```
+var x = 21;
+var girl = function () {
+    console.log(x);                                            // undefined
+    var x = 20;
+};
+girl ();
 ```
