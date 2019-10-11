@@ -10,7 +10,6 @@ Partition the locations where **this** can be used into three categories:
 
 ---
 ### this in functions
-
 #### this in real function
 1. this is an implicit parameter that is set to a default value
 * this refers to the global object (window in browsers) in sloppy mode. 
@@ -29,6 +28,29 @@ function strictFunc() {
 }
 strictFunc();                           // true
 ```
-#### this in construcctors
+
+#### (Important) this in constructors
+1. Functions become constructors if you invoke them via the new operator.
+2. That operator creates a new object and passes it to the constructor via this.
+3. In other words, this refers to the newly created instance.
+
+```
+var savedThis;
+function Constr() {
+  savedThis = this;
+}
+var inst = new Constr();
+console.log(savedThis === inst);        // true
+```
 
 #### this in methods
+1. this refers to the receiver, the object on which the method has been invoked.
+
+```
+var obj = {
+  method: function() {
+    console.log(this === obj);          // true
+  }
+}
+obj.method();
+```
