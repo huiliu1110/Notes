@@ -167,6 +167,11 @@ jane.sayHelloTo.call({name: 'Hui'}, 'Tarzan');      // Hui says hello to Tarzan
 jane.sayHelloTo.apply(jane, ['Tarzan']);            // Jane says hello to Tarzan
 jane.sayHelloTo.apply({name: 'Hui'}, ['Tarzan']);   // Hui says hello to Tarzan
 
+var func1 = jane.sayHelloTo.bind(jane);
+func1('Tarzan');                                    // Jane says hello to Tarzan
+var func2 = jane.sayHelloTo.bind(jane, 'Tarzan');
+func2();                                            // Jane says hello to Tarzan
+
 
 var func = jane.sayHelloTo;                         // Jane says hello to Tarzan
 func.call(jane, 'Tarazn');                          // Jane says hello to Tarzan
@@ -184,13 +189,18 @@ func.apply({name: 'Hui'}, ['Tarzan']);              // Hui says hello to Tarzan
 > 2. The first parameter is the value that **this** will have inside the invoked function.
 > 3. The second parameter is an array that provides the arguments for the invocation.
 
+> 1. Function.prototype.bind(thisValue, arg1?, ..., argN?)
+> 2. This method performs partial function application
+> 3. It creates a new function
+> 4. The new function appends its arguments to arg1, ... argN when it calls the original function.
+
 ```
 function func() {
   console.log('this: ' + this);
   console.log('arguments: ' + Array.prototype.slice.call(arguments));
 }
 var bound = func.bind('abc', 1, 2);
-bound();                                          // this: abc arguments: 1,2
+bound();                                            // this: abc arguments: 1,2
 ```
 ```
 function func(a, b) {
@@ -211,8 +221,6 @@ var bound = func.bind('abc', 1, 2, 3);
 bound();                                            // this: abc a: 1 b: 2 arguments: 1,2,3
 bound(1);                                           // this: abc a: 1 b: 2 arguments: 1,2,3,1
 ```
-> 1. 
-> 2.
 
 
 
