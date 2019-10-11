@@ -184,8 +184,35 @@ func.apply({name: 'Hui'}, ['Tarzan']);              // Hui says hello to Tarzan
 > 2. The first parameter is the value that **this** will have inside the invoked function.
 > 3. The second parameter is an array that provides the arguments for the invocation.
 
+```
+function func() {
+  console.log('this: ' + this);
+  console.log('arguments: ' + Array.prototype.slice.call(arguments));
+}
+var bound = func.bind('abc', 1, 2);
+bound();                                          // this: abc arguments: 1,2
+```
+```
+function func(a, b) {
+  console.log('this: ' + this);
+  console.log('a: ' + a);
+  console.log('b: ' + b);
+  console.log('arguments: ' + Array.prototype.slice.call(arguments));
+}
+var bound = func.bind('abc', 1);
+bound();                                            // this: abc a: 1 b: undefined arguments: 1
+bound(1);                                           // this: abc a: 1 b: 1 arguments: 1,1
 
+var bound = func.bind('abc', 1, 2);
+bound();                                            // this: abc a: 1 b: 2 arguments: 1,2
+bound(1);                                           // this: abc a: 1 b: 2 arguments: 1,2,1
 
+var bound = func.bind('abc', 1, 2, 3);
+bound();                                            // this: abc a: 1 b: 2 arguments: 1,2,3
+bound(1);                                           // this: abc a: 1 b: 2 arguments: 1,2,3,1
+```
+> 1. 
+> 2.
 
 
 
