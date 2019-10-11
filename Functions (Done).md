@@ -221,10 +221,3 @@ var bound = func.bind('abc', 1, 2, 3);
 bound();                                            // this: abc a: 1 b: 2 arguments: 1,2,3
 bound(1);                                           // this: abc a: 1 b: 2 arguments: 1,2,3,1
 ```
-
-
-
-
-
-
-
