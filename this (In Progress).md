@@ -54,3 +54,25 @@ var obj = {
 }
 obj.method();
 ```
+---
+### this-related pitfalls
+#### Pitfall: forgetting new
+
+
+---
+#### Some interview questions: 
+```
+var myObject = {
+    foo: "bar",
+    func: function() {
+        var self = this; // self === myObject
+        console.log("outer func:  this.foo = " + this.foo);     // outer func:  this.foo = bar
+        console.log("outer func:  self.foo = " + self.foo);     // outer func:  self.foo = bar
+        (function() {
+            console.log("inner func:  this.foo = " + this.foo); // inner func:  this.foo = undefined
+            console.log(this === window);                       // true
+            console.log("inner func:  self.foo = " + self.foo); // inner func:  self.foo = bar
+        }());
+    }
+};
+```
