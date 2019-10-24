@@ -6,7 +6,7 @@ Clicking on the dropdown arrow, the dropdown menu does not show up.
 #### Resolving:
 The user is using Firefox60.0ESR to load our app.  
 Our dropdown implementation is using a `<button>` to wrap a `<ul>` tag, in this way, we can position the menu easily.  
-`<button>` element is a special case in event dispatch for Firefox older versions (changed in Firefox60).  
+`<button>` element is a special case in event dispatch for Firefox older versions (changed in Firefox66).  
 
 #### Notes:
 **The way to descible the problem is very important.**
