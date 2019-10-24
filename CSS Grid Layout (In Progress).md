@@ -17,4 +17,25 @@ CSS Grid Layout is a two-dimensional layout system for the web. It lets you lay 
 A grid will typically have columns, rows, and then gaps between each row and column - commonly referred to as gutters.
 
 
+```
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 2fr;         // any lenght unit, percentages, fr unit
+  grid-gap: 20px;                                 // any lenght unit, percentages, not an fr unit
+  gap: 20px;                                      // add both `grid-gap` and `gap` properties will be safe.
+}
 
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr 2fr);      // same as `1fr 2fr 1fr 2fr`
+                                                  // the first value is how many times you want to the track listing to repeat
+                                                  // the second value is a track listing, which may be one or more tracks that you want to repeat
+}
+```
+
+1. `display: grid;` gives you a one column grid.
+2. `grid-template-columns: 1fr 1fr 1fr;` to add some columns to the grid.
+3. The `fr` unit distributes available space in proportion.
+4. `grid-column-gap: 20px; grid-row-gap: 20px; grid-app: 20px;` set gaps between tracks.
+5. `grid-template-columns: repeat(3, 1fr); grid-template-columns: repeat(3, 1fr 2fr);` repeat notation.
+6. 
