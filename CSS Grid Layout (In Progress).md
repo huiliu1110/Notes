@@ -33,9 +33,9 @@ A grid will typically have columns, rows, and then gaps between each row and col
 }
 ```
 
-1. `display: grid;` gives you a one column grid.
-2. `grid-template-columns: 1fr 1fr 1fr;` to add some columns to the grid.
+1. `display: grid;`                                               gives you a one column grid.
+2. `grid-template-columns: 1fr 1fr 1fr;`                          to add some columns to the grid.
 3. The `fr` unit distributes available space in proportion.
-4. `grid-column-gap: 20px; grid-row-gap: 20px; grid-app: 20px;` set gaps between tracks.
-5. `grid-template-columns: repeat(3, 1fr); grid-template-columns: repeat(3, 1fr 2fr);` repeat notation.
+4. `grid-column-gap: 20px; grid-row-gap: 20px; grid-app: 20px;`   set gaps between tracks.
+5. `grid-template-columns: repeat(3, 1fr);`                       repeat notation.
 6. 
