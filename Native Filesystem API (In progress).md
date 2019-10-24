@@ -1,4 +1,22 @@
-Drag and Drop
+#### Drag and Drop
+
+Reference: 
+https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API  
+https://github.com/react-dropzone/react-dropzone  
+https://github.com/react-dropzone/react-dropzone/issues/276  
+
+
+Problems:
+file MIME type is not recognized as same across platforms.  
+.csv file in OSX is recognized as text/csv, whereas in Windows it is recognized as application/vnd.ms-excel.
+
+#### MIME type
+
+
+#### Download and Display
+1) `<a href>`
+2) `<a href download>`
+3) https://stackoverflow.com/a/23797348/3561, want a custom authentication header with the download request.
 
 
 #### CSVToArray:
