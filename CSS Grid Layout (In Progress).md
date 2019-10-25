@@ -34,4 +34,20 @@ A grid will typically have columns, rows, and then gaps between each row and col
 ```
 
 1. The `fr` unit distributes available space in proportion.
-2. 
+
+
+```
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;                 //  explicit grid
+}
+
+.container {
+  display: grid;
+  grid-auto-columns: 200px;                       // implicit grid
+                                                  // by default, tracks created in the implicit grid are auto sized. 
+                                                  // `grid-auto-columns` property gives implicit grid tracks a size
+}
+```
+
+
