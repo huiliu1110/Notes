@@ -45,8 +45,13 @@ A grid will typically have columns, rows, and then gaps between each row and col
 .container {
   display: grid;
   grid-auto-columns: 200px;                       // implicit grid
-                                                  // by default, tracks created in the implicit grid are auto sized. 
+                                                  // by default, tracks created in the implicit grid are auto sized 
                                                   // `grid-auto-columns` property gives implicit grid tracks a size
+}
+
+.container {
+  display: grid;
+  grid-auto-columns: minmax(100px, auto);         // the minimum size is 100 pixels, the maximum is auto
 }
 ```
 
