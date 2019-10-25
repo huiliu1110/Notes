@@ -55,4 +55,13 @@ A grid will typically have columns, rows, and then gaps between each row and col
 }
 ```
 
+```
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+```
+1. Ask grid to create as many columns as will fit into the container.
+2. Grid is creating as many 200 pixel columns as will fit into the container.
+3. Then sharing whatever space is leftover between all of the columns - the maximum is 1fr which distributes space evenly between tracks.
 
