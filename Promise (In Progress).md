@@ -15,40 +15,20 @@ A promise will be in one of 3 possible states: fulfilled, rejected, pending.
 Promise users can attach callbacks to handle the fulfilled value or the reason for rejection.  
 A promise will start doing whatever task you give it as soon as the promise constructor is invoked.  
 A promise is an object which can be returned synchronously from an asynchronous function.  
-
+Once settled, a promise can not be resettled. Calling resolve() or reject() again will have no effect.
 
 
 ---
 
+```
+const wait = time => new Promise((resolve) => setTimeout(resolve, time));
 
+wait(3000).then(() => console.log('Hello!'));
+```
 
+All spec-compatible promises define a .then() method which you use to pass handlers which can take the resolved or rejected value. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+---
 
 #### Other References (very hard to understand):  
 https://exploringjs.com/es6/ch_async.html  
