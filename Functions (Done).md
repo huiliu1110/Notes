@@ -13,12 +13,12 @@ Nonmethod funciton (normal function)
 Constructor (a factory for objects)
 1. invoke a function via the new operator.
 2. an example invocation: **new Date()**.
-3. the names of normal functions start with **uppercase** letters.
+3. the names of constructor functions start with **uppercase** letters.
 
 Method
 1. store a function in a property of an object, which turns it into a method that you can invoke via that object.
 2. an example invocation: **obj.foo()**
-3. the names of normal functions start with **lowercase** letters.
+3. the names of method functions start with **lowercase** letters.
 
 ---
 #### Parameters vs. Arguments
