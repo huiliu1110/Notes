@@ -132,15 +132,44 @@ npm install @babel/preset-env --save-dev
   "presets": ["@babel/preset-env"]
 }
 ```
-12. Install `react`:
+12. Install `eslint`:
+```
+npm install eslint --save-dev
+```
+13. Run command:
+```
+npx eslint --init
+
+? How would you like to use ESLint? To check syntax and find problems
+? What type of modules does your project use? JavaScript modules (import/export)
+? Which framework does your project use? React
+? Does your project use TypeScript? No
+? Where does your code run? Browser, Node
+? What format do you want your config file to be in? JavaScript
+The config that you've selected requires the following dependencies:
+
+eslint-plugin-react@latest
+? Would you like to install them now with npm? Yes
+```
+14. Install `prettier`: 
+```
+npm install prettier eslint-config-prettier eslint-plugin-prettier --save-dev 
+```
+15. Extend the eslint config file:
+```
+{
+  "extends": ["plugin:prettier/recommended"]
+}
+```
+16. Install `react`:
 ```
 npm install react
 ```
-13. Install `@babel/preset-react`:
+17. Install `@babel/preset-react`:
 ```
 npm install @babel/preset-react --save-dev
 ```
-14. Add `@babel/preset-react` into the babel config file:
+18. Add `@babel/preset-react` into the babel config file:
 ```
 {
   "presets": ["@babel/preset-env", "@babel/preset-react"]
