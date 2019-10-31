@@ -12,6 +12,7 @@
 - [Functions](https://github.com/haleyhuiliu/Notes/blob/master/Functions%20(Done).md)
 - [this](https://github.com/haleyhuiliu/Notes/blob/master/this%20(In%20Progress).md)
 - [Promise](https://github.com/haleyhuiliu/Notes/blob/master/Promise%20(In%20Progress).md)
+- [Iterators and Generators](https://github.com/haleyhuiliu/Notes/blob/master/Iterators%20and%20Generators%20(Done).md)
 
 #### Web
 - HTTP
