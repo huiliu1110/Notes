@@ -3,7 +3,7 @@
 
 #### CSS
 - [CSS Grid Layout](https://github.com/haleyhuiliu/Notes/blob/master/CSS%20Grid%20Layout%20(Done).md)
-- Flex Layout
+- [Flexbox Layout](https://github.com/haleyhuiliu/Notes/blob/master/Flexbox%20(In%20Progress).md)
 
 #### JavaScript
 - [Functions](https://github.com/haleyhuiliu/Notes/blob/master/Functions%20(Done).md)
