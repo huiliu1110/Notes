@@ -1,3 +1,11 @@
+
+
+Promises are a pattern that helps with one particular kind of asynchronous programming: A function (or method) that returns a single result asynchronously.
+
+An asynchronous function returns a Promise, an object that serves as a placeholder and container for the final result.
+Callbacks registered via the Promise method then() are notified of the result:
+
+
 References:  
 https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-promise-27fc71e77261  
 
