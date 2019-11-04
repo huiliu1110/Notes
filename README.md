@@ -28,6 +28,7 @@
 - React
   - [The Virtual DOM](https://github.com/haleyhuiliu/Notes/blob/master/The%20Virtual%20DOM%20(In%20Progress).md)
   - [Hooks](https://github.com/haleyhuiliu/Notes/blob/master/Hooks%20(In%20progress).md)
+  - [The Component Lifecycle](https://github.com/haleyhuiliu/Notes/blob/master/The%20Component%20Lifecycle%20(In%20progress).md)
   
 #### Node.js
 -
