@@ -1,6 +1,9 @@
+#### Important
+References:  
+https://developers.google.com/web/fundamentals/primers/promises
 
-
-Promises are a pattern that helps with one particular kind of asynchronous programming: A function (or method) that returns a single result asynchronously.
+---
+(Skip) Promises are a pattern that helps with one particular kind of asynchronous programming: A function (or method) that returns a single result asynchronously.
 
 An asynchronous function returns a Promise, an object that serves as a placeholder and container for the final result.
 Callbacks registered via the Promise method then() are notified of the result:
