@@ -1,4 +1,4 @@
-#### Important
+#### Important, very good resource to understand promises.
 References:  
 https://developers.google.com/web/fundamentals/primers/promises
 
