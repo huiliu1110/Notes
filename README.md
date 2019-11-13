@@ -19,6 +19,9 @@
 - Local Storage / Cookies
 - [Web worker](https://github.com/haleyhuiliu/Notes/blob/master/Web%20workers%20(In%20Progress).md)
 - Progressive Web Apps
+- Cross Domain
+- Web security / CSRF / XSS
+- SEO
 
 #### Component Library
 - [Component Library](https://github.com/haleyhuiliu/Notes/blob/master/Component%20library%20(In%20progress).md)
