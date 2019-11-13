@@ -49,7 +49,7 @@ Topic - Hashtables
 - [ ] implement one using only arrays in JS
 
 Topic - Trees
-- [ ] travelsal algorithms
+- [ ] traversal algorithms
   - [ ] BFS
   - [ ] DFS
   - [ ] inorder, postorder, preorder
