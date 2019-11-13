@@ -37,7 +37,7 @@ My code should be
 For the following concepts, please ask 4 questions for each of them.
 1. What is it? 
 2. How to implement it? 
-3. What is the complexity? access complexity? search complexity? insertion complexity? deletion complexity? space complexity?
+3. What is the complexity? access? search? insertion? deletion? space? [cheatsheet](https://www.bigocheatsheet.com/)
 4. Pros? Cons? tradeoffs?
 
 Topic - Sorting
