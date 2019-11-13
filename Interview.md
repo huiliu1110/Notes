@@ -26,8 +26,52 @@ How to practice:
 - [ ] Coding on a Google Doc or a whiteboard
 - [ ] Time myself during practice
 
-You code should be 
+My code should be 
 - [ ] Clean
 - [ ] Without typing mistakes
 - [ ] Bug-free
 - [ ] Properly handles edge cases
+
+---
+
+For the following concepts, please ask 4 questions for each of them.
+1. What is it? 
+2. How to implement it? 
+3. What is the complexity? 
+4. Pros? Cons? tradeoffs?
+
+Topic - Sorting
+- [ ] quicksort
+- [ ] merge sort
+
+Topic - Hashtables
+- [ ] understand how they work
+- [ ] implement one using only arrays in JS
+
+Topic - Trees
+- [ ] travelsal algorithms
+  - [ ] BFS
+  - [ ] DFS
+  - [ ] inorder, postorder, preorder
+- [ ] manipulation algorithms
+- [ ] binary trees
+- [ ] n-ary trees
+- [ ] trie-trees
+- [ ] balanced binary tree
+- [ ] red tree
+- [ ] black tree
+- [ ] splay tree
+- [ ] AVL tree
+
+Topic - Graphs
+- [ ] represent a graph
+  - [ ] objects and pointers
+  - [ ] matrix
+  - [ ] adjacency list
+- [ ] traversal algorighms
+  - [ ] breadth-first search
+  - [ ] depth-first search
+  
+
+
+
