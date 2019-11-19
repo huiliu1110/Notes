@@ -1,0 +1,7 @@
+Web Storage
+
+- sessionStorage
+- localStorage
+
+
+
