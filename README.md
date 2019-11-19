@@ -16,7 +16,7 @@
 
 #### Web
 - HTTP
-- Local Storage / Cookies
+- [Web Storage (Session storage / Local storage) / Cookies](https://github.com/haleyhuiliu/Notes/blob/master/Web%20Storage%20(In%20Progress).md)
 - [Web worker](https://github.com/haleyhuiliu/Notes/blob/master/Web%20workers%20(In%20Progress).md)
 - Progressive Web Apps
 - Cross Domain
