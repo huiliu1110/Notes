@@ -52,3 +52,16 @@
 
 #### Interview Docs
 - 
+
+#### Algorithms
+- Union-Find
+- Stacks and Queues
+- Elementary Sorts
+- Mergesort
+- Quicksort
+- Priority Queues
+- Elementary Symbol Tables
+- Balanced Search Trees
+- Geometric Applications of BSTs
+- Hash Tables
+
