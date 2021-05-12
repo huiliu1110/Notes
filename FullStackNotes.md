@@ -30,7 +30,11 @@ Understand the following concepts:
 | | |
 | -- | -- |
 | What is WWW? | ---- |
-| What is FTP? | ---- |
 | What is Internet? | ---- |
 | What is Intranet? | ---- |
+| What is Extranet? | ---- |
 | What is VPN? | ---- |
+| What is HTTP? | ---- |
+| What is FTP? | ---- |
+| What is TCP? | ---- |
+| What is UDP? | ---- |
