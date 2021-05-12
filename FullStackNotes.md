@@ -4,6 +4,8 @@ Full Stack for front end engineers, v2 - Jem Young
 
 ### Command line
 Understand some basic commands: 
+| Command | Function |
+| ----------- | ----------- |
 | cd | change directory |
 | ls | list files |
 | pwd | working directory |
