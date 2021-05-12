@@ -4,8 +4,8 @@ Full Stack for front end engineers, v2 - Jem Young
 
 ### Command line
 Understand some basic commands: 
-| Command | Function |
-| ----------- | ----------- |
+| Command | |
+| -- | ---- |
 | cd | change directory |
 | ls | list files |
 | pwd | working directory |
@@ -17,7 +17,12 @@ Understand some basic commands:
 | man | command manual |
 | echo | repeat input |
 
-What is shell?
-What is Bash?
-What is Terminal?
-What is Kernel?
+Understand the following concepts:
+
+| Command | |
+| -- | ---- |
+| What is Shell? | ---- |
+| What is Bash? | ---- |
+| What is Terminal? | ---- |
+| What is Application? | ---- |
+| What is Kernel? | ---- |
